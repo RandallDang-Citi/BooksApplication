@@ -1,0 +1,17 @@
+@import "../../../../../../shared/styles/base.scss";
+
+$icon-size: 1.25rem;
+
+.arrow-icon {
+  width: $icon-size;
+  height: $icon-size;
+  font-size: $icon-size;
+}
+
+:host {
+  ::ng-deep {
+    .mat-mdc-button.mat-unthemed {
+      color: $white;
+    }
+  }
+}

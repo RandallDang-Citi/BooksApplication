@@ -1,0 +1,31 @@
+<section>
+  <div class="container">
+    <h3 class="mb-3">Search books</h3>
+
+    <app-books-search-form (searchButtonClick)="loadBooks($event)" />
+
+    <div *ngIf="books && searchParams" class="mt-4">
+      <div *ngIf="!books.length; else collectionNotEmpty">
+        Your search did not return any results
+      </div>
+      <ng-template #collectionNotEmpty>
+        <h5>Search results for "{{ searchParams.searchTerm }}"</h5>
+        <app-book-card-list
+          [bookItems]="books"
+          (updateFavoriteShelf)="onUpdateFavoriteBook($event)"
+        ></app-book-card-list>
+        <div class="d-flex justify-content-center align-items-center mt-3">
+          <button mat-button class="bg-dark-purple" (click)="onNextResults()">
+            <div class="d-flex align-items-center">
+              <span class="me-1">Load more</span>
+              <mat-icon class="arrow-icon">{{
+                ICON_DEFINITION.ARROW_DOWN
+              }}</mat-icon>
+            </div>
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</section>
+<app-loader></app-loader>

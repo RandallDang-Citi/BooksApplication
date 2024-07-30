@@ -1,0 +1,9 @@
+@import "../../../../shared/styles/base.scss";
+
+:host {
+  ::ng-deep {
+    .mat-mdc-button.mat-unthemed {
+      color: $white;
+    }
+  }
+}

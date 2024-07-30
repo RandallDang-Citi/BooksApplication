@@ -1,0 +1,33 @@
+@use "@angular/material" as mat;
+
+$white: #fff;
+$black: #222222;
+
+$main-color-pallete: (
+  50: #e8eaef,
+  100: #c4c9d9,
+  200: #9fa7bf,
+  300: #7b85a5,
+  400: #606b93,
+  500: #465383,
+  600: #3f4b7b,
+  700: #37426f,
+  800: #303962,
+  900: #25294a,
+  contrast: (
+    50: $black,
+    100: $black,
+    200: $black,
+    300: $white,
+    400: $white,
+    500: $white,
+    600: $white,
+    700: $white,
+    800: $white,
+    900: $white,
+  ),
+);
+
+$gray: map-get(mat.$gray-palette, 400);
+$purple: map-get($main-color-pallete, 300);
+$dark-purple: map-get($main-color-pallete, 900);

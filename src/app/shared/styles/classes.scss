@@ -1,0 +1,21 @@
+@import "./colors.scss";
+
+.c-white {
+  color: $white;
+}
+
+.c-gray {
+  color: $gray;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bg-dark-purple {
+  background-color: $dark-purple;
+}
+
+.min-bg-height {
+  min-height: 100vh;
+}
